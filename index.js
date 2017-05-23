@@ -7,6 +7,7 @@ import ThemedParty from './components/ThemedDecorations';
 ReactDOM.render(
   <div>
     <Invitation>Hey, you should totally come to this awesome party I'm throwing!</Invitation>
+
     <ThemedParty theme="heaven">
       <p>A decoration</p>
       <p>Some other decoration</p>
@@ -17,3 +18,7 @@ ReactDOM.render(
 );
 
 require('./test/index-test.js'); // Leave this in!
+
+
+// ThemedParty is parent, and p tags are children, passing theme="heaven" as props
+// React.Children.map takes 2 parameters - 1) children themselves, 2) function that transforms the value of children
